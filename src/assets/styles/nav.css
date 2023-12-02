@@ -1,0 +1,104 @@
+.nav-container{
+    width: 100%;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: clamp(0.9rem, -0.0912rem + 1.92vw, 1.5
+    2   rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+    padding-top: 1.5rem;
+
+
+    & ul{
+        width: 100%;
+
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        color: #212121;
+        margin-left: 3rem;
+
+        & li{
+            letter-spacing: 3px;
+            cursor: pointer;
+            position: relative;
+            margin-right: 5rem;
+        } & a{
+            text-decoration: none;
+            color: #212121;
+        }::before{
+            content: '';
+            position: absolute;
+            bottom: -0.7rem;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            border-radius: 50%;
+            background-color: #212121;
+            transition: all .5s;
+
+
+        }:hover::before{
+            width: 100%;
+        }
+    }
+
+    .nav-redes{
+        width: 8%;
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
+        color: #212121;
+        margin-right: 3rem;
+    }
+}
+
+
+
+@media (max-width: 640px){
+
+    .nav-container{
+        justify-content: center;
+        align-items: center;
+        padding-right: 3rem;
+        width: clamp(22.6rem, -0.0286rem + 100.5714vw, 40.2rem);
+    }
+    .nav-container ul{
+        display: flex;
+        flex-direction: column;
+    } & ul {
+        margin-right: 0rem !important;
+    
+    } & li{
+        position: static !important;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+    } 
+    .nav-container ul li a::before {
+        content: none; 
+    }
+
+    .nav-container ul li a:hover::before {
+        width: 0%; 
+    }
+
+    .nav-redes{
+        width: 50%;
+    }
+
+
+}
+
+@media (max-width:609px){
+    .nav-redes{
+        width: 100% !important;
+    }
+}
+
+@media (max-width:585px){
+
+    .nav-redes .icon{
+        width: 7vw !important;
+    }
+}
+
