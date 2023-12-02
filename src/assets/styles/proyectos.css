@@ -1,67 +1,68 @@
 .proyectos-container {
-    position: relative;
-    height: 300vh;
-    background-color: #1a202c; /* bg-neutral-900 */
-  }
-  
-  .carousel {
-    position: sticky;
-    top: 0;
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  .cards-container {
-    display: flex;
-    gap: 16px; /* gap-4 */
-  }
-  
-  .card {
-    position: relative;
-    height: 450px;
-    width: 450px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column-reverse;
+  position: relative;
+  height: 300vh;
+  background-color: #1a202c; /* bg-neutral-900 */
+}
 
-  }
-  
-  .card-image {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s;
-  }
-  
-  .card:hover .card-image {
-    transform: scale(1.1);
-  }
-  
-  .card-title {
-    background-color: transparent;
-    inset: 0;
-    z-index: 10;
-    display: grid;
-    place-content: center;    
-  }
-  
-  .card-title p {
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-    padding: 32px; /* p-8 */
-    font-size: 48px; /* text-6xl */
-    font-weight: 900; /* font-black */
-    text-transform: uppercase;
-    color: #212121;
-    backdrop-filter: blur(10px);
-  }
-  
-.project-description{
-  max-width: 100%;
+.carousel {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cards-container {
+  display: flex;
+  gap: 16px; /* gap-4 */
+}
+
+.card {
+  position: relative;
+  height: 450px;
+  width: 450px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+
+}
+
+.card-image {
   position: absolute;
-  text-align: justify;
-  padding: 0 20rem;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s;
+}
+
+.card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-title {
+  background-color: transparent;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-content: center;    
+}
+
+.card-title p {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  padding: 32px; 
+  font-size: 48px; 
+  font-weight: 900; 
+  text-transform: uppercase;
+  color: #212121;
+  backdrop-filter: blur(10px);
+}
+
+.project-description{
+max-width: 100%;
+position: fixed;
+bottom: 10rem;
+text-align: justify;
+padding: 0 20rem;
 }

@@ -146,14 +146,7 @@ const Description = ({ description, isHovered }) => {
 };
 
 
-
 export default Proyectos;
-
-
-
-
-
-
 
 
 
