@@ -115,6 +115,8 @@ const Proyectos = () => {
 
 
   return (
+    <div className="prueba">
+
     <section ref={targetRef} className="proyectos-container">
       <div className="carousel">
         <motion.div style={{ x }} className="cards-container">
@@ -139,6 +141,7 @@ const Proyectos = () => {
         isHovered={hoveredCard !== null}
       />
     </section>
+    </div>
   );
 };
 

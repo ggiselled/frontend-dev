@@ -2,7 +2,9 @@
   position: relative;
   height: 300vh;
   background-color: #1a202c; /* bg-neutral-900 */
+
 }
+
 
 .carousel {
   position: sticky;
@@ -62,7 +64,10 @@
 .project-description{
 max-width: 100%;
 position: fixed;
-bottom: 5rem;
+bottom: -2rem;
 text-align: justify;
-padding: 0 20rem;
+padding-left: 10rem;
+padding-right: 10rem;
+margin-bottom: 3rem;
+font-size: 1rem;
 }
