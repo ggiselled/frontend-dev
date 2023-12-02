@@ -1,5 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import '../assets/styles/proyectos.css';
 
@@ -19,7 +19,184 @@ const originalCards = [
     url: 'src/assets/img/bubba2c2.jpg',
     title: 'p1',
     id: 2,
+    description: "kkkkkLorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+
+  },
+  {
+    url: 'src/assets/img/bubba3c2.jpg',
+    title: 'p1',
+    id: 3,
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+  },
+  {
+    url: 'src/assets/img/sbux1c2.jpg',
+    title: 'p2',
+    id: 4,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+  },
+  {
+    url: 'src/assets/img/sbux2c2.jpg',
+    title: 'p2',
+    id: 4,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+
+  },
+  {
+    url: 'src/assets/img/evoltis2.jpg',
+    title: 'p3',
+    id: 4,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+
+  },
+  {
+    url: 'src/assets/img/sbuxx1c2.jpg',
+    title: 'p4',
+    id: 4,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+
+  },
+  {
+    url: 'src/assets/img/sbuxx2c2.jpg',
+    title: 'p4',
+    id: 4,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+
+  },
+  {
+    url: 'src/assets/img/hdc1c2.jpg',
+    title: 'p5',
+    id: 4,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+
+  },
+  {
+    url: 'src/assets/img/hdc2c2.jpg',
+    title: 'p5',
+    id: 4,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+
+  },
+  {
+    url: 'src/assets/img/hdc3c2.jpg',
+    title: 'p5',
+    id: 4,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+
+  },
+
+];
+
+
+const Proyectos = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: targetRef });
+  const cardWidth = 462;
+  const gap = 4;
+  const totalWidth = originalCards.length * (cardWidth + gap) - window.innerWidth;
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${totalWidth}px`]);
+
+  const [hoveredCard, setHoveredCard] = useState(null);
+  const [activeDescription, setActiveDescription] = useState('');
+
+  // Calcula el extremo del scroll en porcentaje
+  const scrollEnd = totalWidth / (originalCards.length * cardWidth) * 100;
+
+  useEffect(() => {
+    const checkScrollEdges = () => {
+      const currentScroll = scrollYProgress.get() * 100;
+      if (currentScroll <= 0 || currentScroll >= scrollEnd) {
+        setActiveDescription('');
+      }
+    };
+
+    const unsubscribe = scrollYProgress.onChange(checkScrollEdges);
+    return () => unsubscribe();
+  }, [scrollYProgress, scrollEnd]);
+
+
+  return (
+    <section ref={targetRef} className="proyectos-container">
+      <div className="carousel">
+        <motion.div style={{ x }} className="cards-container">
+          {originalCards.map((card, index) => (
+            <Card
+              key={index}
+              card={card}
+              setIsHovered={() => {
+                setHoveredCard(card.id);
+                setActiveDescription(card.description);
+              }}
+              clearHovered={() => {
+                setHoveredCard(null);
+                setActiveDescription('');
+              }}
+            />
+          ))}
+        </motion.div>
+      </div>
+      <Description
+        description={activeDescription}
+        isHovered={hoveredCard !== null}
+      />
+    </section>
+  );
+};
+
+const Card = ({ card, setIsHovered, clearHovered }) => {
+  return (
+    <div className="card"
+      onMouseEnter={setIsHovered}
+      onMouseLeave={clearHovered}
+    >
+      <div
+        style={{ backgroundImage: `url(${card.url})` }}
+        className="card-image"
+      />
+      <div className="card-title">
+        <p>{card.title}</p>
+      </div>
+    </div>
+  );
+};
+
+const Description = ({ description, isHovered }) => {
+  return (
+    <motion.div
+      className="project-description"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isHovered ? 1 : 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <p>{description}</p>
+    </motion.div>
+  );
+  }
+
+export default Proyectos;
+
+
+
+//Hacer que, cuando el carrousel en el scroll horizontal llegue al tope, los textos desaparezcan para poder continuar escrolenado sin dificultad
+
+
+
+
+
+
+
+
+/* const originalCards = [
+  {
+    url: 'src/assets/img/bubba1c2.jpg',
+    title: 'P1',
+    id: 1,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
+  },
+  {
+    url: 'src/assets/img/bubba2c2.jpg',
+    title: 'p1',
+    id: 2,
+    description: "kkkkkLorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, magni ad? Sequi, perspiciatis praesentium? Ipsam nam illo corrupti temporibus. Culpa reiciendis quaerat nesciunt placeat assumenda commodi iusto similique aliquid cupiditate?"
 
   },
   {
@@ -146,19 +323,7 @@ const Description = ({ description, isHovered }) => {
 };
 
 
-export default Proyectos;
-
-
-
-
-
-
-
-
-
-
-
-
+export default Proyectos; */
 
 
 
