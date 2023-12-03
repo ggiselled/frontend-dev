@@ -85,7 +85,7 @@ const originalCards = [
 ];
 
 
-const Proyectos = () => {
+export const Proyectos = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
   const cardWidth = 462;
@@ -115,7 +115,7 @@ const Proyectos = () => {
   return (
     <div className="prueba">
 
-    <section ref={targetRef} className="proyectos-container">
+    <section id='proyectos' ref={targetRef} className="proyectos-container">
       <div className="carousel">
         <motion.div style={{ x }} className="cards-container">
           {originalCards.map((card, index) => (
@@ -173,7 +173,7 @@ const Description = ({ description, isHovered }) => {
   );
   }
 
-export default Proyectos;
+
 
 
 
