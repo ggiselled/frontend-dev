@@ -2,7 +2,7 @@
   "name": "portfolio-front",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ggiselled.github.io/ggiselled.github.io",
+  "homepage": "https://ggiselled.github.io/frontend-dev",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
