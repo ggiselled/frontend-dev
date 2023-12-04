@@ -1,4 +1,4 @@
-.hola-conteiener{
+.hola-conteiener {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.hola-title{
+.hola-title {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -14,25 +14,27 @@
     margin-top: 5rem;
     padding-bottom: 1rem;
     font-size: 3rem;
-    
-} & .title-underline{
-        width: 15rem;
-        background-color: #212121;
-        height: 2px;
-        margin-top: 40px;
-        margin-bottom: 30px;
-        border-radius: 20%;
-    }
-    
+
+}
+
+& .title-underline {
+    width: 15rem;
+    background-color: #212121;
+    height: 2px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 20%;
+}
+
 
 .hola-title h2 {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
     margin-right: 3rem;
-    
+
 }
 
-.hola-description{
+.hola-description {
     margin-left: 3rem;
     margin-right: 3rem;
     margin-top: 1rem;
@@ -43,16 +45,67 @@
     font-size: clamp(1.0rem, 0.9509rem + 0.6625vw, 1.5rem);
 }
 
-.hola-description h2  {
+.hola-cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 10rem;
+    text-align: center;
+    background-color: #BDBDBD;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.hola-cv:hover {
+    background: #212121;
+    color: #f8f8f8;
+}
+
+.hola-cv span {
+    background-color: #BDBDBD;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.hola-cv a {
+    text-decoration: none;
+    color: #212121;
+    background-color: #BDBDBD;
+    padding: 0.6rem;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.hola-cv span:hover {
+    background: #212121;
+    color: #f8f8f8;
+}
+
+.hola-cv a:hover {
+    background: #212121;
+    color: #f8f8f8;
+}
+
+.hola-description h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     margin-bottom: 10px;
     font-size: clamp(1.0rem, 0.9509rem + 0.6625vw, 1.5rem);
-  }
+}
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
 
-    .hola-title{
+    .hola-title {
         font-size: clamp(1.3rem, -0.1193rem + 6.2385vw, 3rem);
     }
 
