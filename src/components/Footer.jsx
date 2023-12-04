@@ -20,7 +20,7 @@ export const Footer = () => {
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.8 }}
                     >
-                        <FontAwesomeIcon icon={faGithub} style={{ color: '212121' }} className='icon' />
+                        <FontAwesomeIcon icon={faGithub} style={{ color: '212121' }} className='icon icongb' />
                     </motion.a>
                     <motion.a
                         href='https://www.linkedin.com/in/ggiselled/'

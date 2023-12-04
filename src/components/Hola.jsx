@@ -4,7 +4,7 @@ export const Hola = () => {
 
     return (
         <>
-        <section className="hola-container">
+        <section className="hola-container" id='hola'>
             <div className="hola-title">
                 <h2>DESARROLLADORA</h2>
                 <h2>FRONTEND.</h2>

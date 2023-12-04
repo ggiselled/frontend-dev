@@ -8,6 +8,7 @@ footer{
     justify-content: center;
     margin-top: 5rem;
     background-color: #B6B6B6;
+    position: absolute;
 }
 
 .footer-content{
@@ -47,3 +48,8 @@ span{
     background-color: #B6B6B6;
 }
 
+@media (max-width: 600px){
+    .icongb{
+        margin-right: 2rem
+    }
+}
