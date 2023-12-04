@@ -3,6 +3,7 @@ import { Nav } from './components/Nav'
 import { Hola } from './components/Hola'
 import {Proyectos}  from './components/Proyectos'
 import { Contacto } from './components/Contacto'
+import { Footer } from './components/Footer'
 
 export const App = () => {
 
@@ -13,6 +14,7 @@ export const App = () => {
     <Hola/>
     <Proyectos/>
     <Contacto/>
+    <Footer/>
     </div>
     </>
   )

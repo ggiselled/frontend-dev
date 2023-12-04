@@ -1,0 +1,49 @@
+footer{
+    width: 100%;
+    height: 1.7rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    background-color: #B6B6B6;
+}
+
+.footer-content{
+    display: flex;
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    justify-content: space-between;
+    font-family: 'Montserat', 'san-serif';
+    font-weight: 600;
+    font-size: 0.8rem;
+    background-color: #B6B6B6;
+}
+
+span{
+    background-color: #B6B6B6; 
+}
+
+.footer-redes{
+    width: 8%;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    color: #212121;
+    margin-right: 3rem;
+    background-color: #B6B6B6;
+}
+
+.footer-redes a{
+    background-color: #B6B6B6;
+    text-decoration: none;
+    color: #212121;
+}
+
+
+.footer-redes .icon{
+    background-color: #B6B6B6;
+}
+
