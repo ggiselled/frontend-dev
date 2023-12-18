@@ -65,12 +65,18 @@
 .project-description{
 width: 100%;
 position: fixed;
-bottom: clamp(0.0625rem, 0.4585rem + -1.7598vw, -1rem);
+bottom: 6.5rem;
 text-align: center;
 padding-left: 10rem;
 padding-right: 10rem;
 margin-bottom: 1rem;
 font-size: 1rem;
+}
+
+@media (max-width: 430px){
+  .project-description{
+    bottom: 1rem;
+  }
 }
 
 @media (max-width: 700px){

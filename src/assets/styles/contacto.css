@@ -157,3 +157,14 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   #submit:hover {
     color: #757575;
   }
+
+  @media (max-width: 430px){
+    #form{
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .contacto-container h2{
+      margin-bottom: 2rem;
+    }
+  }

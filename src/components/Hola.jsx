@@ -1,4 +1,6 @@
 import '../assets/styles/hola.css'
+import cv from '../../public/CV-Giselle Goenaga-Frontend(esp).pdf'
+
 
 export const Hola = () => {
 
@@ -17,7 +19,7 @@ export const Hola = () => {
                 <h2>Actualmente me encuentro en Buenos Aires, Argentina.</h2>
                 <h2>Soy estudiante de la Tecnicatura en Programación en la Universidad Nacional de Quilmes.</h2>
                 <div className='hola-cv'>
-                    <a href="/CV Giselle Goenaga - Frontend (esp).pdf" target='_blank' rel="noopener noreferrer">
+                    <a href={cv} target='_blank' rel="noopener noreferrer">
                     <span>Descarga mi CV</span>
                     </a>
 
