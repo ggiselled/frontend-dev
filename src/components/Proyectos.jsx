@@ -26,7 +26,7 @@ const originalCards = [
     url: bubba1,
     title: 'Bubba Bags',
     id: 1,
-    description: "Listado dinámico colecciones de productos | Conexión a un store Vuex para obtener los datos de las colecciones | Evento que selecciona la colección y redirige al usuario a la página del producto seleccionado"
+    description: "Listado dinámico colecciones de productos | Conexión store Vuex para obtener los datos de las colecciones | Evento que selecciona la colección y redirige al usuario a la página del producto seleccionado"
   },
   {
     url: bubba2,
@@ -45,7 +45,7 @@ const originalCards = [
     url: ce1,
     title: 'CIRCULAR ECONOMY',
     id: 4,
-    description: "Creado con Vue + Inertia + Laravel | Manejo de formularios de inicio de sesión y registro a través de modales emergentes | Conexión de formularios con Laravel | Autenticación de usuarios | Manejo entre páginas con Inertia"
+    description: "Creado con Vue + Inertia + Laravel | Manejo de formularios de inicio de sesión y registro | Conexión de formularios con Laravel | Autenticación de usuarios | Manejo entre páginas con Inertia"
   },
   {
     url: ce2,
