@@ -1,5 +1,6 @@
 import '../assets/styles/hola.css'
 import cv from '../../public/CV-Giselle Goenaga-Frontend(esp).pdf'
+import Atom from './spline/Atom.jsx'
 
 
 export const Hola = () => {
@@ -7,10 +8,15 @@ export const Hola = () => {
     return (
         <>
         <section className="hola-container" id='hola'>
-            <div className="hola-title">
-                <h2>DESARROLLADORA</h2>
-                <h2>FRONTEND.</h2>
-                <div className="title-underline"></div>
+            <div className="hola-header">
+                <div className='hola-title'>
+                    <h2>DESARROLLADORA</h2>
+                    <h2>FRONTEND.</h2>
+                    <div className="title-underline"></div>
+                </div>
+                <div className='hola-atom'>
+                    <Atom/>
+                </div>
             </div>
             <div className="hola-description">
                 <h1>Hola, mi nombre es Giselle.</h1>
