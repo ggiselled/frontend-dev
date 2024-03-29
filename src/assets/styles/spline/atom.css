@@ -1,4 +1,9 @@
-.atom-spline{
-    z-index: -1;
-    width: 100%;
-}
+.atom-spline {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: 22% !important;
+    z-index: 1;
+  }

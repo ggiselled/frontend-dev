@@ -13,9 +13,9 @@ export const Nav = () => {
         <>
         <nav className="nav-container">
             <ul>
-                <li><a href="#hola">¡HOLA!</a></li>
-                <li><a href="#proyectos">PROYECTOS</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
+                <li><a href="#hola">resume</a></li>
+                <li><a href="#proyectos">linkedin</a></li>
+                <li><a href="#contacto">email</a></li>
             </ul>
             <div className="nav-redes">
                 <motion.a

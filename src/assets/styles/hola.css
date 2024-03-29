@@ -1,10 +1,19 @@
-.hola-conteiener {
+
+.hola-container {
+    position: relative;
+    bottom: 770px;
+    pointer-events: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    z-index: 0;
 }
+
+.hola-container * {
+    pointer-events: auto; 
+  }
 
 .hola-header {
     display: flex;
@@ -35,7 +44,7 @@
 
 }
 
-.hola-atom
+
 
 .hola-description {
     margin-left: 3rem;
@@ -105,6 +114,7 @@
     margin-bottom: 10px;
     font-size: clamp(1.0rem, 0.9509rem + 0.6625vw, 1.5rem);
 }
+
 
 @media (max-width: 800px) {
 
