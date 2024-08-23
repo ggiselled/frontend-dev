@@ -13,7 +13,7 @@
         width: 100%;
 
         display: flex;
-        justify-content: flex-start;
+        justify-content: flex-end;
         list-style: none;
         color: #fafafa;
         margin-left: 3rem;
@@ -25,7 +25,7 @@
             margin-right: 5rem;
         } & a{
             text-decoration: none;
-            color: #212121;
+            color: #fafafa;
         }::before{
             content: '';
             position: absolute;
@@ -34,22 +34,13 @@
             width: 0%;
             height: 3px;
             border-radius: 50%;
-            background-color: #212121;
+            background-color:  #fafafa;;
             transition: all .5s;
 
 
         }:hover::before{
             width: 100%;
         }
-    }
-
-    .nav-redes{
-        width: 8%;
-        display: flex;
-        justify-content: space-evenly;
-        text-decoration: none;
-        color: #212121;
-        margin-right: 3rem;
     }
 }
 
@@ -69,6 +60,7 @@
     } & ul {
         margin-right: 0rem !important;
     
+    
     } & li{
         position: static !important;
         padding: 0.5rem 0rem 0.5rem 0rem;
@@ -81,9 +73,7 @@
         width: 0%; 
     }
 
-    .nav-redes{
-        width: 50%;
-    }
+
 
 
 }
