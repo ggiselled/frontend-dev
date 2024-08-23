@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
+import cv from '/CV-Giselle Goenaga-Frontend(esp).pdf'
 
 
 
@@ -13,7 +14,7 @@ export const Nav = () => {
         <>
         <nav className="nav-container">
             <ul>
-                <li><a href="#hola">resume</a></li>
+                <li><a href={cv} target='_blank' rel="noopener noreferrer">resume</a></li>
                 <li><a href="#proyectos">linkedin</a></li>
                 <li><a href="#contacto">email</a></li>
             </ul>

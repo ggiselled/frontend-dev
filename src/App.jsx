@@ -9,10 +9,10 @@ export const App = () => {
   return (
     <>
     <div className="portfolio-container">
-    <Nav/>
-    <Hola/>
-    <Proyectos/>
-    <Footer/>
+      <Nav/>
+      <Hola/>
+      <Proyectos/>
+      <Footer/>
     </div>
     </>
   )
