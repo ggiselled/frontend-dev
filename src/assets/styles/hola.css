@@ -1,31 +1,30 @@
-
 .hola-container {
-    position: relative;
-    bottom: clamp(25rem, -12.9845rem + 62.0155vw, 45rem);
-    pointer-events: none;
-    z-index: 0;
-    color: #fafaface;
-    height: 100vh;
+  position: relative;
+  bottom: clamp(25rem, -12.9845rem + 62.0155vw, 45rem);
+  pointer-events: none;
+  z-index: 0;
+  color: #fafaface;
+  height: 100vh;
 }
 
 .hola-container * {
-    pointer-events: auto; 
-  }
-
-
-.hola-description h1 {
-    margin-left: 10%;
-    margin-bottom: 20px;
-    font-size: clamp(1.0rem, 0.9509rem + 0.6625vw, 1.5rem);
+  pointer-events: auto;
 }
 
-
-
+.hola-description h1 {
+  margin-left: 10%;
+  margin-bottom: 20px;
+  font-size: clamp(1rem, 0.9509rem + 0.6625vw, 1.5rem);
+}
 
 @media (max-width: 800px) {
+  .hola-header {
+    font-size: clamp(1.3rem, -0.1193rem + 6.2385vw, 3rem);
+  }
 
-    .hola-header {
-        font-size: clamp(1.3rem, -0.1193rem + 6.2385vw, 3rem);
+  @media (min-width: 600px) and (max-width: 800px) {
+    .hola-container {
+      bottom: clamp(15rem, -0.7895rem + 42.1053vw, 25rem);
     }
-
+  }
 }
